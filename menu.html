@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap css -->
+        <link
+            rel="stylesheet"
+            href="bootstrap-4.3.1-dist/css/bootstrap.min.css"
+        />
+        <!-- jquery -->
+        <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <!-- <script>
+            $(document).ready(function () {
+                alert("ok");
+            });
+        </script> -->
+        <style>
+            .h5 {
+                font-family: Montserrat,arial;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #ff5821;
+            }
+            .price {
+                font-weight: 600;
+            }
+            #menu-filters ul li{
+                display: inline-block;
+                color: #fff;
+                letter-spacing: 1px;
+            }
+            #menu-filters ul li a {
+                padding: 10px 20px;
+                font-size: 14px;
+                color: #565656;
+                border-radius: 0px;
+                border: 1px solid #BBBBBB;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            #menu-filters ul li a.active, #menu-filters ul li a:hover{
+                background: #ffb03b;
+                color: #fff;
+                border: 1px solid #ffb03b;
+            }
+            #newPost {
+                display: none;
+            }
+        </style>
+
+        <!-- <script>
+            $(document).ready(function(){
+                $(".btn-b").click(function(){
+                    window.alert("breakfast");
+                    $("#breakfast").toggle();
+                    $("#lunch").toggle();
+                })
+                $(".btn-l").click(function(){
+                    window.alert("lunch");
+                })
+                $(".btn-d").click(function(){
+                    window.alert("diner")
+                })
+            })
+        </script> -->
+
+
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">VS Restra</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navItems"
+                aria-controls="navItems"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navItems">
+                <ul class="navbar-nav ml-auto" >
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active p-1">
+                        <a class="nav-link" href="menu.html">Menu<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        
+        <!-- Menu -->
+        <br /><br />
+        <section id="menu-list">
+            <div class="container">
+                <div>
+                    <!-- <div class="col-md-12 text-center">
+                        <h1>Food Menu</h1>
+                    </div> -->
+                    <!-- <div id="menu-filters" class="col-md-12 text-center">
+                        <ul>
+                            <li><a href="" class="btn-b" id="btnB" onclick="myFunc()">Breakfast</a></li>
+                            <li><a href="" class="btn-l">Lunch</a></li>
+                            <li><a href="" class="btn-d">Dinner</a></li>
+                        </ul>
+                    </div> -->
+
+                    <div class="menu-wrapper">
+                        <!-- Breakfast -->
+                        <div class="row breakfast" id="breakfast">
+                            <!-- Food Item -->
+                            <h1 class="col-lg-12 p-3 display-4">Breakfast Menu</h1>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Plain Dosa</span>
+                                    <span class="price" style="float: right;">Rs 50</span><br/>
+                                    <span class="text-muted">1 piece with Sambhar and Chutney</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Masala Dosa</span>
+                                    <span class="price" style="float: right;">Rs 70</span><br/>
+                                    <span class="text-muted">1 piece with Sambhar and Chutney</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Paneer Dosa</span>
+                                    <span class="price" style="float: right;">Rs 90</span><br/>
+                                    <span class="text-muted">1 piece with Sambhar and Chutney</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Idli</span>
+                                    <span class="price" style="float: right;">Rs 40</span><br/>
+                                    <span class="text-muted">2 piece with Sambhar and Chutney</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Aloo Pratha</span>
+                                    <span class="price" style="float: right;">Rs 60</span><br/>
+                                    <span class="text-muted">2 piece with butter and curd</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Onion Pratha</span>
+                                    <span class="price" style="float: right;">Rs 60</span><br/>
+                                    <span class="text-muted">2 piece with butter and curd</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Puri Sabji</span>
+                                    <span class="price" style="float: right;">Rs 40</span><br/>
+                                    <span class="text-muted">4 piece with sabji and jalebi</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Chole Bhature</span>
+                                    <span class="price" style="float: right;">Rs 60</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Break Omlet</span>
+                                    <span class="price" style="float: right;">Rs 40</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Sprouts</span>
+                                    <span class="price" style="float: right;">Rs 200</span><br/>
+                                    <span class="text-muted">200gm with salt and sauces</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Oats</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">200 gm</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Boiled Egg</span>
+                                    <span class="price" style="float: right;">Rs 40</span><br/>
+                                    <span class="text-muted">4 piece</span>
+                                </div>
+                            </div>
+                        </div><br/><br/>
+
+                        <!-- Lunch -->
+                        <div class="row lunch" id="lunch">
+                            <!-- Food Item -->
+                            <h1 class="col-lg-12 p-3 display-4">Lunch Menu</h1>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Chilli Panner</span>
+                                    <span class="price" style="float: right;">Rs 250</span><br/>
+                                    <span class="text-muted">Hot & spicy Indian cottage cheese</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Mushroom in Black Pepper</span>
+                                    <span class="price" style="float: right;">Rs 250</span><br/>
+                                    <span class="text-muted">Deep fried Mushroom</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Dhaniya Murgh</span>
+                                    <span class="price" style="float: right;">Rs 350</span><br/>
+                                    <span class="text-muted">Chicken marinated with pan seared</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Chicken Kabab</span>
+                                    <span class="price" style="float: right;">Rs 150</span><br/>
+                                    <span class="text-muted">8 piece chicken</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Tandoori Chicken</span>
+                                    <span class="price" style="float: right;">Rs 400</span><br/>
+                                    <span class="text-muted">1 full piece chicken</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Butter Panner Masala</span>
+                                    <span class="price" style="float: right;">Rs 200</span><br/>
+                                    <span class="text-muted">200gm paneer with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Kadai Paneer</span>
+                                    <span class="price" style="float: right;">Rs 190</span><br/>
+                                    <span class="text-muted">200gm paneer with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Egg Masala</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">2 piece egg masala curry</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Butter Chicken</span>
+                                    <span class="price" style="float: right;">Rs 300</span><br/>
+                                    <span class="text-muted">400gm chicken with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Kadai Chicken</span>
+                                    <span class="price" style="float: right;">Rs 300</span><br/>
+                                    <span class="text-muted">400gm chicken with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Mutton with gravy</span>
+                                    <span class="price" style="float: right;">Rs 400</span><br/>
+                                    <span class="text-muted">400gm mutton with gravy</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Butter Naan</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Plain Naan</span>
+                                    <span class="price" style="float: right;">Rs 80</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Plain Roti</span>
+                                    <span class="price" style="float: right;">Rs 20</span><br/>
+                                    <span class="text-muted">1 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Plain Rice</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">1 bowl</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Biryani Rice</span>
+                                    <span class="price" style="float: right;">Rs 130</span><br/>
+                                    <span class="text-muted">1 bowl</span>
+                                </div>
+                            </div>
+                        </div><br/><br/>
+
+                        <!-- Dinner -->
+                        <div class="row dinner" id="dinner">
+                            <!-- Food Item -->
+                            <h1 class="col-lg-12 p-3 display-4">Dinner Menu</h1>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Chilli Panner</span>
+                                    <span class="price" style="float: right;">Rs 250</span><br/>
+                                    <span class="text-muted">Hot & spicy Indian cottage cheese</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Mushroom in Black Pepper</span>
+                                    <span class="price" style="float: right;">Rs 250</span><br/>
+                                    <span class="text-muted">Deep fried Mushroom</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Chilli Panner</span>
+                                    <span class="price" style="float: right;">Rs 250</span><br/>
+                                    <span class="text-muted">Hot & spicy Indian cottage cheese</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Chicken Tikka</span>
+                                    <span class="price" style="float: right;">Rs 250</span><br/>
+                                    <span class="text-muted">8 piece chicken</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Dhaniya Murgh</span>
+                                    <span class="price" style="float: right;">Rs 350</span><br/>
+                                    <span class="text-muted">Chicken marinated with pan seared</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Chicken Kabab</span>
+                                    <span class="price" style="float: right;">Rs 150</span><br/>
+                                    <span class="text-muted">8 piece chicken</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Tandoori Chicken</span>
+                                    <span class="price" style="float: right;">Rs 400</span><br/>
+                                    <span class="text-muted">1 full piece chicken</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Butter Panner Masala</span>
+                                    <span class="price" style="float: right;">Rs 200</span><br/>
+                                    <span class="text-muted">200gm paneer with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Kadai Paneer</span>
+                                    <span class="price" style="float: right;">Rs 190</span><br/>
+                                    <span class="text-muted">200gm paneer with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Egg Masala</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">2 piece egg masala curry</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Butter Chicken</span>
+                                    <span class="price" style="float: right;">Rs 300</span><br/>
+                                    <span class="text-muted">400gm chicken with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Kadai Chicken</span>
+                                    <span class="price" style="float: right;">Rs 300</span><br/>
+                                    <span class="text-muted">400gm chicken with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Mutton with gravy</span>
+                                    <span class="price" style="float: right;">Rs 400</span><br/>
+                                    <span class="text-muted">400gm mutton with gravy</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Mutton Biryani</span>
+                                    <span class="price" style="float: right;">Rs 350</span><br/>
+                                    <span class="text-muted">serve for 1</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Chicken Biryani</span>
+                                    <span class="price" style="float: right;">Rs 300</span><br/>
+                                    <span class="text-muted">serve for 1</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 food-item">
+                                <div class="p-3">
+                                    <span class="h5">Garlic Bread</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Cheese Naan</span>
+                                    <span class="price" style="float: right;">Rs 120</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Butter Naan</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Plain Naan</span>
+                                    <span class="price" style="float: right;">Rs 80</span><br/>
+                                    <span class="text-muted">2 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Plain Roti</span>
+                                    <span class="price" style="float: right;">Rs 20</span><br/>
+                                    <span class="price" class="text-muted">1 piece</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Plain Rice</span>
+                                    <span class="price" style="float: right;">Rs 100</span><br/>
+                                    <span class="text-muted">1 bowl</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="h5">Biryani Rice</span>
+                                    <span class="price" style="float: right;">Rs 130</span><br/>
+                                    <span class="text-muted">1 bowl</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div><br/><br/>
+        </section>        
+
+        <!-- Footer -->
+        <div class="bg-dark">
+            <div class="row p-5">
+                <div class="col-lg-6">
+                    <h6 class="text-info"><u>Address:</u></h6>
+                    <p class="text-light">
+                        VS Restra, #106, Outer Ring Road, Near BDA Complex, Nagarbhavi 2nd Stage,
+                        Bangalore, Karnataka, 560056
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-info"><u>Social Media Links:</u></h6>
+                    <a  href="http://www.facebook.com">
+                        <img src="image/facebook.png" width="40" />
+                    </a>
+                    <a class="ml-4 mr-4" href="http://www.instagram.com">
+                        <img src="image/instagram.png" width="40" />
+                    </a>
+                    <a href="http://www.twitter.com">
+                        <img src="image/twitter.png" width="40" />
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-info"><u>Quick Links:</u></h6>
+                        <a href="index.html" class="text-light">Home</a>
+                        <a href="" class="text-light mr-2 ml-2">Menu</a>
+                        <a href="about.html" class="text-light mr-2 ml-2">About</a>
+                        <a href="contact.html" class="text-light">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+    </body>
+</html>

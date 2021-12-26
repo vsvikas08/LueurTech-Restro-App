@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap css -->
+        <link
+            rel="stylesheet"
+            href="bootstrap-4.3.1-dist/css/bootstrap.min.css"
+        />
+        <!-- jquery -->
+        <script src="bootstrap-4.3.1-dist/js/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        
+        <title>Contact us</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">VS Restra</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navItems"
+                aria-controls="navItems"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navItems">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="index.html">
+                            Home<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item active p-1">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- Contact us -->
+        <div class="container">
+            <form class="mb-5 mt-5">
+                <span class="display-4 m-2">Contact us</span>
+                <div class="form-row m-2">
+                    <input class="form-control" placeholder="First Name" id="fname" />
+                </div>
+                <div class="form-row m-2">
+                    <input class="form-control" placeholder="Last Name" id="lname" />
+                </div>
+                <div class="form-row m-2">
+                    <input type="email" class="form-control" placeholder="Email" id="email" required/>
+                </div>
+                <div class="form-row m-2">
+                    <input type="text" class="form-control" placeholder="Mobile No." id="mob"/>
+                </div>
+                <div class="form-row m-2">
+                    <textarea class="form-control" rows="4" id="msg"></textarea>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-primary" id="submit" onclick="submit_msg()">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <div class="bg-dark">
+            <div class="row p-5">
+                <div class="col-lg-6">
+                    <h6 class="text-info"><u>Address:</u></h6>
+                    <p class="text-light">
+                        VS Restra, #106, Outer Ring Road, Near BDA Complex, Nagarbhavi 2nd Stage,
+                        Bangalore, Karnataka, 560056
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-info"><u>Social Media Links:</u></h6>
+                    <a  href="http://www.facebook.com">
+                        <img src="image/facebook.png" width="40" />
+                    </a>
+                    <a class="ml-4 mr-4" href="http://www.instagram.com">
+                        <img src="image/instagram.png" width="40" />
+                    </a>
+                    <a href="http://www.twitter.com">
+                        <img src="image/twitter.png" width="40" />
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-info"><u>Quick Links:</u></h6>
+                        <a href="index.html" class="text-light">Home</a>
+                        <a href="menu.html" class="text-light mr-2 ml-2">Menu</a>
+                        <a href="about.html" class="text-light mr-2 ml-2">About</a>
+                        <a href="" class="text-light">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            
+        </script>
+    </body>
+</html>
